@@ -58,6 +58,10 @@ contract NarutoNFT is ERC721, Ownable {
     function mint(uint256 quantity_) public payable {
         require(isPublicMintEnabled, "Minting not enabled");
         require(msg.value == quantity_ * mintPrice, "wrong mint value");
-        require(totalSupply + quantity_ <= maxSupply);
+        require(totalSupply + quantity_ <= maxSupply, "Sold out");
+        require(
+            walletMint[msg.sender] + quantity_ <= maxPerWallet,
+            "exceed max wallet"
+        );
     }
 }
