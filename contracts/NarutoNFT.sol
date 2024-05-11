@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract NarutoNFT is ERC721, Ownable {
     uint256 public mintPrice;
-    uint256 public totalPrice;
+    uint256 public totalSupply;
     uint256 public maxSupply;
     uint256 public maxPerWallet;
     bool public isPublicMintEnabled;
@@ -19,7 +19,7 @@ contract NarutoNFT is ERC721, Ownable {
         address initialOwner
     ) payable ERC721("NarutoUzumaki", "NU") Ownable(initialOwner) {
         mintPrice = 0.05 ether;
-        totalPrice = 0 ether;
+        totalSupply = 0 ether;
         maxSupply = 10000;
         maxPerWallet = 5;
     }
@@ -46,5 +46,18 @@ contract NarutoNFT is ERC721, Ownable {
                     ".json"
                 )
             );
+    }
+
+    function withdraw() external onlyOwner {
+        (bool success, ) = withdrawWallet.call{value: address(this).balance}(
+            ""
+        );
+        require(success, "withdraw failed");
+    }
+
+    function mint(uint256 quantity_) public payable {
+        require(isPublicMintEnabled, "Minting not enabled");
+        require(msg.value == quantity_ * mintPrice, "wrong mint value");
+        require(totalSupply + quantity_ <= maxSupply);
     }
 }
