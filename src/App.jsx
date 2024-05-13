@@ -1,10 +1,15 @@
-import React from 'react'
-
+import { useState } from 'react'
+import './App.css'
+import Navbar from './components/Navbar'
+import NarutoNFT from './components/NFT'
 const App = () => {
+  const [account, setAccount] = useState([])
+
   return (
-    <div className='text-3xl text-lime-300'>
-      hii
-    </div>
+    <>
+      <Navbar account={account} setAccount={setAccount} />
+      <NarutoNFT account={account} setAccount={setAccount} />
+    </>
   )
 }
 
