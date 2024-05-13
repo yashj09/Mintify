@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import NarutoNFT from './components/NFT'
+import NarutoNFT from './components/NarutoNFT'
 const App = () => {
   const [account, setAccount] = useState([])
 
