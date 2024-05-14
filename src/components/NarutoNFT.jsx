@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ethers } from 'ethers'
 import narutoNFT from '../NarutoNFT.json'
-const NarutoNftAddress = "0xc06CE63b126423297555E6Dbd709F386F167D87b"
+const NarutoNftAddress = "0x59E51f98c2AbE1ca99909bE07B4Dc91eBe707700"
 const NarutoNFT = ({ account, setAccount }) => {
   const [mintAmount, setMintAmount] = useState(1)
   const isConnected = Boolean(account[0])
