@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import Navbar from './components/Navbar'
 import NarutoNFT from './components/NarutoNFT'
 const App = () => {
@@ -7,8 +6,10 @@ const App = () => {
 
   return (
     <>
-      <Navbar account={account} setAccount={setAccount} />
-      <NarutoNFT account={account} setAccount={setAccount} />
+      <div className="bg-[url('./assets/Background.jpg')] justify-center w-full  bg-no-repeat bg-cover bg-center rounded-lg h-[100vh] text-lg font-medium">
+        <Navbar account={account} setAccount={setAccount} />
+        <NarutoNFT account={account} setAccount={setAccount} />
+      </div>
     </>
   )
 }

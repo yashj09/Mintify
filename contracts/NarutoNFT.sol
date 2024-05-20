@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721\ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract NarutoNFT is ERC721URIStorage, Ownable {
@@ -52,7 +52,7 @@ contract NarutoNFT is ERC721URIStorage, Ownable {
         require(success, "withdraw failed");
     }
 
-    function mint(uint256 quantity_, string calldata _uri) public payable {
+    function mint(uint256 quantity_) public payable {
         require(isPublicMintEnabled, "Minting not enabled");
         require(msg.value == quantity_ * mintPrice, "wrong mint value");
         require(totalSupply + quantity_ <= maxSupply, "Sold out");
@@ -64,7 +64,6 @@ contract NarutoNFT is ERC721URIStorage, Ownable {
             uint256 newTokenId = totalSupply + 1;
             totalSupply++;
             _safeMint(msg.sender, newTokenId);
-            _setTokenURI(newTokenId, _uri);
         }
     }
 }

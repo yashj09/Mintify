@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ethers } from 'ethers'
 import narutoNFT from '../NarutoNFT.json'
-const NarutoNftAddress = "0x59E51f98c2AbE1ca99909bE07B4Dc91eBe707700"
+const NarutoNftAddress = "0x4E9239f389734B1867dbe6521317b21a488F9b84"
 const NarutoNFT = ({ account, setAccount }) => {
   const [mintAmount, setMintAmount] = useState(1)
   const isConnected = Boolean(account[0])
@@ -31,10 +31,10 @@ const NarutoNFT = ({ account, setAccount }) => {
   }
   return (
     <>
-      <div>
-        <div>
+      <div className='flex flex-col justify-center items-center mt-44 gap-3' >
+        <div className='flex gap-3'>
           <button onClick={handleDecrement}>-</button>
-          <span>{mintAmount}</span>
+          <button variant="outline">{mintAmount}</button>
           <button onClick={handleIncrement}>+</button>
         </div>
         <button onClick={handleMint}>Mint</button>
