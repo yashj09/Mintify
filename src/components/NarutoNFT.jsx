@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ethers ,BrowserProvider} from "ethers";
+import { ethers } from "ethers";
 import narutoNFT from "../NarutoNFT.json";
 const NarutoNftAddress = "0x4E9239f389734B1867dbe6521317b21a488F9b84";
 const NarutoNFT = ({ account, setAccount }) => {
@@ -18,7 +18,7 @@ const NarutoNFT = ({ account, setAccount }) => {
 
       try {
         const response = await contract.mint(mintAmount, {
-          value: ethers.utils.parseEther((mintAmount * 0.05).toString()),
+          value: ethers.parseEther((mintAmount * 0.05).toString()),
         });
         console.log("Mint response is", response);
       } catch (error) {
