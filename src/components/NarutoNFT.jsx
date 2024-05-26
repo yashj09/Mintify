@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ethers } from "ethers";
+import { ethers ,BrowserProvider} from "ethers";
 import narutoNFT from "../NarutoNFT.json";
 const NarutoNftAddress = "0x4E9239f389734B1867dbe6521317b21a488F9b84";
 const NarutoNFT = ({ account, setAccount }) => {
