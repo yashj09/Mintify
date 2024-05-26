@@ -8,7 +8,7 @@ const NarutoNFT = ({ account, setAccount }) => {
 
   const handleMint = async () => {
     if (window.ethereum) {
-      const provider = await new ethers.providers.Web3Provider(window.ethereum);
+      const provider = await new ethers.BrowserProvider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
         NarutoNftAddress,
