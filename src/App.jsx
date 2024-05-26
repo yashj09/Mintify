@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import NarutoNFT from './components/NarutoNFT'
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import NarutoNFT from "./components/NarutoNFT";
 const App = () => {
-  const [account, setAccount] = useState([])
+  const [account, setAccount] = useState([]);
 
   return (
     <>
@@ -11,7 +11,7 @@ const App = () => {
         <NarutoNFT account={account} setAccount={setAccount} />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

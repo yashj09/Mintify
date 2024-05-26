@@ -1,5 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-verify");
+// eslint-disable-next-line no-undef
 const dotenv = require('dotenv');
 dotenv.config();
 /** @type import('hardhat/config').HardhatUserConfig */
