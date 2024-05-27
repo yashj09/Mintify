@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ethers } from "ethers";
+import { RiNftFill } from "react-icons/ri";
 import narutoNFT from "../NarutoNFT.json";
 const NarutoNftAddress = "0x4E9239f389734B1867dbe6521317b21a488F9b84";
 const NarutoNFT = ({ account, setAccount }) => {
@@ -37,12 +38,25 @@ const NarutoNFT = ({ account, setAccount }) => {
   return (
     <>
       <div className="flex flex-col justify-center items-center mt-44 gap-3">
-        <div className="flex gap-3">
-          <button onClick={handleDecrement}>-</button>
+        <div className="flex gap-4 text-xl px-7 p-2 bg-black text-black bg-opacity-20 rounded-xl shadow-xl">
+          <button
+            onClick={handleDecrement}
+            className=" bg-white px-2 py-1 text-black bg-opacity-30 rounded-xl shadow-xl"
+          >
+            -
+          </button>
           <button>{mintAmount}</button>
-          <button onClick={handleIncrement}>+</button>
+          <button
+            className=" bg-white px-2 py-1 text-black bg-opacity-30 rounded-xl shadow-xl"
+            onClick={handleIncrement}
+          >
+            +
+          </button>
         </div>
-        <button onClick={handleMint}>Mint</button>
+        <div className="px-5 py-2 flex gap-1 text-xl flex-row bg-black text-black bg-opacity-20 rounded-xl shadow-xl text-center justify-center items-center">
+          <RiNftFill />
+          <button onClick={handleMint}>Mint</button>
+        </div>
       </div>
     </>
   );
