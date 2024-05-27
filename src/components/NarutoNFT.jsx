@@ -38,22 +38,25 @@ const NarutoNFT = ({ account, setAccount }) => {
   return (
     <>
       <div className="flex flex-col justify-center items-center mt-44 gap-3">
-        <div className="flex gap-4 text-xl px-7 p-2 bg-black text-black bg-opacity-20 rounded-xl shadow-xl">
+        <h2 className="px-4 py-1 bg-white text-black bg-opacity-30 rounded-xl shadow-xl">
+          Enter Amount of NFT to Mint (Max-5)
+        </h2>
+        <div className="flex gap-4 text-xl px-7 p-2 bg-white text-black bg-opacity-20 rounded-xl shadow-xl items-center justify-center">
           <button
             onClick={handleDecrement}
-            className=" bg-white px-2 py-1 text-black bg-opacity-30 rounded-xl shadow-xl"
+            className="text-2xl bg-black px-2 py-0 text-white bg-opacity-30 rounded-xl shadow-xl items-center"
           >
             -
           </button>
           <button>{mintAmount}</button>
           <button
-            className=" bg-white px-2 py-1 text-black bg-opacity-30 rounded-xl shadow-xl"
+            className="text-2xl bg-black px-2 py-0  text-white bg-opacity-30 rounded-xl shadow-xl items-center"
             onClick={handleIncrement}
           >
             +
           </button>
         </div>
-        <div className="px-5 py-2 flex gap-1 text-xl flex-row bg-black text-black bg-opacity-20 rounded-xl shadow-xl text-center justify-center items-center">
+        <div className="px-5 py-2 flex gap-1 text-xl flex-row bg-white text-black bg-opacity-20 rounded-xl shadow-xl text-center justify-center items-center">
           <RiNftFill />
           <button onClick={handleMint}>Mint</button>
         </div>
