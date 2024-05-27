@@ -1,5 +1,7 @@
 import React from "react";
 import { FiYoutube } from "react-icons/fi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 const Navbar = ({ account, setAccount }) => {
   const isConnected = Boolean(account[0]);
 
@@ -21,13 +23,28 @@ const Navbar = ({ account, setAccount }) => {
     <div className="flex flex-row justify-between ">
       <div className="flex gap-10 m-10">
         <div>
-          <a href="https://www.linkedin.com/in/yash-jain-5a92861ab">Linkedin</a>
+          <a href="https://www.linkedin.com/in/yash-jain-5a92861ab">
+            <div className="flex gap-1 items-center">
+              <FaLinkedin />
+              Linkedin
+            </div>
+          </a>
         </div>
         <div>
-          <a href="https://x.com/0xYash_Jain">Twitter</a>
+          <a href="https://x.com/0xYash_Jain">
+            <div className="flex gap-1 items-center">
+              <BsTwitterX />
+              Twitter
+            </div>
+          </a>
         </div>
         <div>
-          <a href="https://github.com/yashj09">Github</a>
+          <a href="https://github.com/yashj09">
+            <div className="flex gap-1 items-center">
+              <FaGithub />
+              Github
+            </div>
+          </a>
         </div>
       </div>
       <div className="flex gap-10 m-10">
