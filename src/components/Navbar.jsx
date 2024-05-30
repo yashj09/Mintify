@@ -50,7 +50,7 @@ const Navbar = ({ account, setAccount }) => {
       <div className="flex gap-10 m-10">
         <div className="flex gap-1 justify-center items-center ">
           <FiYoutube />
-          Minting Guide
+          <a href="https://youtu.be/YYOGnSeUnXk">Minting Guide</a>
         </div>
         <div>
           {isConnected ? (

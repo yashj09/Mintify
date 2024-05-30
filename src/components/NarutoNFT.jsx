@@ -21,6 +21,8 @@ const NarutoNFT = ({ account, setAccount }) => {
         const response = await contract.mint(mintAmount, {
           value: ethers.parseEther((mintAmount * 0.05).toString()),
         });
+        let responce2 = await contract.totalSupply();
+        console.log("Your token id is", (++responce2).toString());
         console.log("Mint response is", response);
       } catch (error) {
         console.error("Error is", error);
@@ -59,6 +61,7 @@ const NarutoNFT = ({ account, setAccount }) => {
         <div className="px-5 py-2 flex gap-1 text-xl flex-row bg-white text-black bg-opacity-20 rounded-xl shadow-xl text-center justify-center items-center">
           <RiNftFill />
           <button onClick={handleMint}>Mint</button>
+          {handleMint.responce2}
         </div>
       </div>
     </>
