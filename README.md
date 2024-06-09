@@ -1,7 +1,9 @@
 # Mintify
 
 Welcome to Mintify, a unique platform for minting free Naruto-themed NFTs! Mintify is deployed on the Sepolia testnet and utilizes the ERC-721 standard for creating and managing NFTs.
+
 🔗 Live link :  https://mintify-eight.vercel.app/
+
 ![Screenshot 2024-05-31 015828](https://github.com/yashj09/Mintify/assets/118172073/883ad1dd-cf82-4ca4-9bd8-387260cc438b)
 ## Table of Contents
 
